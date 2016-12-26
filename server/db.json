@@ -1,0 +1,97 @@
+{
+  "flavors": [
+    {
+      "title": "Amarena",
+      "description": "Ce parfum associe la crème onctueuse à la délicate saveur de l’Amarena. Il développe de délicieuses tonalités printanières et estivales.",
+      "cover": "assets/img/flavor/amarena.jpg"
+    },{
+      "title": "Agrumes Bio de Sicile",
+      "description": "Un sorbet Bio élaboré à partir de ce que la nature offre de meilleur",
+      "cover": "assets/img/flavor/agrumi.jpg"
+    },{
+      "title": "Banane du Brésil",
+      "description": "Parée d’une magnifique couleur jaune, notre Banane est cueillie à maturité, parfumée à souhait. Un délicat sorbet qui associe douceur et exotisme",
+      "cover": "assets/img/flavor/banana.jpg"
+    },{
+      "title": "Café Altura Luz Supremo",
+      "description": "La renommée du véritable espresso italien n'est plus à faire!",
+      "cover": "assets/img/flavor/caffe.jpg"
+    },{
+      "title": "Chocolat Amorino",
+      "description": "Douceur du cacao et onctuosité du lait frais entier",
+      "cover": "assets/img/flavor/cioccolato.jpg"
+    },{
+      "title": "Dulce de leche",
+      "description": "Une recette sud américaine offrant une glace à la Confiture de Lait tout en douceur, au subtil goût caramélisé.",
+      "cover": "assets/img/flavor/dulcedeleche.jpg"
+    },{
+      "title": "Fraise Camarosa",
+      "description": "Cueillette à maturité, pour un fruit charnu et juteux.",
+      "cover": "assets/img/flavor/fragola.jpg"
+    },{
+      "title": "Fruits de la Passion",
+      "description": "Ce sorbet croise les alliances et les parfums floraux des fruits de la passion.",
+      "cover": "assets/img/flavor/passion.jpg"
+    },{
+      "title": "L'Inimitable",
+      "description": "Toute l’Italie dans l’authentique pâte à tartiner au chocolat et aux noisettes!",
+      "cover": "assets/img/flavor/inimitabile.jpg"
+    },{
+      "title": "Noisette Trilobata Tonda e Gentile",
+      "description": "Raffinée, au goût intense et à l’arôme persistant",
+      "cover": "assets/img/flavor/nocciola.jpg"
+    },{
+      "title": "Framboise Héritage",
+      "description": "Un bouquet de fragrances qui évoque en bouche des notes naturelles et sucrées",
+      "cover": "assets/img/flavor/lampone.jpg"
+    },{
+      "title": "Mangue Alfonso d'Inde",
+      "description": "La mangue Alphonso, l’une des plus réputées au monde, est rarement importée en Europe",
+      "cover": "assets/img/flavor/mango.jpg"
+    },{
+      "title": "Citron Femminello",
+      "description": "La saveur riche et acidulée du Limone ovale Femminello di Sorrento est connue, et appréciée depuis des siècles. ",
+      "cover": "assets/img/flavor/lemon.jpg"
+    },{
+      "title": "Citron vert Basilic",
+      "description": "Une explosion fruitée aux notes méditerranéennes pour le bonheur des fins gourmets",
+      "cover": "assets/img/flavor/citron_basilic.jpg"
+    },{
+      "title": "Noix de Coco",
+      "description": "Une glace pour faire voyager les papilles sur des notes généreuses, un moment à savourer sans escale!",
+      "cover": "assets/img/flavor/cocco.jpg"
+    },{
+      "title": "Speculoos",
+      "description": "Du bon sucre candi, une pincée de cannelle et une délicate touche de noix de muscade, confèrent à ce parfum de savoureuses notes épicées!",
+      "cover": "assets/img/flavor/speculos.jpg"
+    },{
+      "title": "Sorbet Chocolat Bio",
+      "description": "Sorbet Bio au chocolat, sans lait, pour satisfaire tous les gourmands",
+      "cover": "assets/img/flavor/cioccolato_bio.jpg"
+    },{
+      "title": "Stracciatella",
+      "description": "Elaboré selon la tradition italienne, ce parfum se révèle être une pure émotion.",
+      "cover": "assets/img/flavor/stracciatella.jpg"
+    },{
+      "title": "Vanille de Madagascar",
+      "description": "De précieuses graines recueillies au coeur des gousses, que nous laissons délicatement et patiemment infuser.",
+      "cover": "assets/img/flavor/vaniglia.jpg"
+    },{
+      "title": "Tiramisu",
+      "description": "Le dessert le plus apprécié d\\'Italie, pour une glace qui distille l’essence même de cet incontournable plaisir raffiné.",
+      "cover": "assets/img/flavor/tiramisu.jpg"
+    },{
+      "title": "Yaourt au yaourt 0%",
+      "description": "Retrouvez toute la fraîcheur et la candeur des yaourts frais à 0% de matière grasse, dans une glace à la texture soyeuse",
+      "cover": "assets/img/flavor/yogurt.jpg"
+    },{
+      "title": "Fiordilatte",
+      "description": "Un grand classique qui met à l\\'honneur le lait frais entier.",
+      "cover": "assets/img/flavor/fiordilatte.jpg"
+    },{
+      "title": "Sorbet Pistache Sublime",
+      "description": "Une pistache sélectionnée au Moyen-Orient, là où la culture de la pistache est connue depuis des milliers d'années.",
+      "cover": "assets/img/flavor/pistache.jpg"
+    }
+  ]
+}
