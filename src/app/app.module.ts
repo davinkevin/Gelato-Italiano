@@ -4,16 +4,20 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import {FlavorService} from './shared/flavor/flavor.service';
+import { FlavorService } from './shared/flavor/flavor.service';
+import { AppRoutesModules } from './app.routes';
+import { FlavorsComponent } from './flavors/flavors.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FlavorsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutesModules
   ],
   providers: [FlavorService],
   bootstrap: [AppComponent]

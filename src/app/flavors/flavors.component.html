@@ -1,0 +1,21 @@
+<section class="visual">
+  <div class="jumbotron"></div>
+  <div class="navbar navbar-default">
+    <p class="text-muted">Gelato Italiano depuis 1886</p>
+  </div>
+</section>
+
+<section class="flavors">
+
+  <h3>Flavors</h3>
+
+  <ul class="flavors">
+    <li class="box" *ngFor="let flavor of flavors">
+      <div class="cover">
+        <img [src]="flavor.cover">
+      </div>
+      <div class="title">{{ flavor.title }}</div>
+      <div class="desc">{{ flavor.description }}</div>
+    </li>
+  </ul>
+</section>

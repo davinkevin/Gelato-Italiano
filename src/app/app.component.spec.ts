@@ -3,7 +3,7 @@
 import {TestBed, async, ComponentFixture} from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import {FlavorService} from './shared/flavor/flavor.service';
-import {DebugElement} from '@angular/core';
+import {DebugElement, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import Spy = jasmine.Spy;
 import {Observable} from 'rxjs';
 import {By} from '@angular/platform-browser';
@@ -14,37 +14,18 @@ describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
   let el: DebugElement;
 
-  let flavorService: FlavorService;
-  let flavors = [
-    {
-      'title': 'Amarena',
-      'description': 'Ce parfum associe la crème onctueuse à la délicate saveur de l’Amarena',
-      'cover': 'assets/img/flavor/amarena.jpg'
-    },{
-      'title': 'Agrumes Bio de Sicile',
-      'description': 'Un sorbet Bio élaboré à partir de ce que la nature offre de meilleur',
-      'cover': 'assets/img/flavor/agrumi.jpg'
-    }
-  ];
-
-  beforeEach(() => {
-    flavorService = jasmine.createSpyObj('flavorService', ['getFlavors']);
-    (flavorService.getFlavors as Spy).and.returnValue(Observable.of(flavors));
-  });
-
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [],
       declarations: [AppComponent],
-      providers: [
-        { provide: FlavorService, useValue: flavorService }
-      ]
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(AppComponent);
-    component = fixture.debugElement.componentInstance;
+    component = fixture.componentInstance;
     el = fixture.debugElement;
-
     fixture.autoDetectChanges();
   });
 
@@ -52,25 +33,8 @@ describe('AppComponent', () => {
     expect(component).toBeTruthy();
   }));
 
-  it(`should have flavors from service`, async(() => {
-
-    fixture.whenStable().then(() => {
-
-      let elements = el.queryAll(By.css('section.flavors ul.flavors li'));
-
-      expect(elements.length).toBe(2);
-      expect(elements[0].query(By.css('.title')).nativeElement.textContent).toEqual(flavors[0].title);
-      expect(elements[0].query(By.css('.desc')).nativeElement.textContent).toEqual(flavors[0].description);
-      expect(elements[0].query(By.css('.cover img')).nativeElement.getAttribute('src')).toEqual(flavors[0].cover);
-
-      expect(elements[1].query(By.css('.title')).nativeElement.textContent).toEqual(flavors[1].title);
-      expect(elements[1].query(By.css('.desc')).nativeElement.textContent).toEqual(flavors[1].description);
-      expect(elements[1].query(By.css('.cover img')).nativeElement.getAttribute('src')).toEqual(flavors[1].cover);
-    });
-
-  }));
-
-  it(`should have name of author`, async(() => {
+  it(`should have name of author in the comp and in the page`, async(() => {
     expect(component.author).toEqual('Kevin');
+    expect(el.query(By.css('footer p')).nativeElement.textContent).toContain('Kevin');
   }));
 });
