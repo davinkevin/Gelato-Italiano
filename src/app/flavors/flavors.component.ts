@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Flavor, FlavorService} from '../shared/flavor/flavor.service';
+import {Flavor} from '../shared/service/flavor/flavor.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'gi-flavors',
@@ -10,11 +11,11 @@ export class FlavorsComponent implements OnInit {
 
   flavors: Flavor[];
 
-  constructor(private flavorService: FlavorService) {}
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.flavorService
-        .getFlavors()
+    this.route.data
+        .map(d => (<any> d).flavors)
         .subscribe(f => this.flavors = f);
   }
 

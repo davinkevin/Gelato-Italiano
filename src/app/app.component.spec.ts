@@ -2,11 +2,10 @@
 
 import {TestBed, async, ComponentFixture} from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import {FlavorService} from './shared/flavor/flavor.service';
 import {DebugElement, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import Spy = jasmine.Spy;
-import {Observable} from 'rxjs';
 import {By} from '@angular/platform-browser';
+import {RouterTestingModule} from "@angular/router/testing";
 
 describe('AppComponent', () => {
 
@@ -16,9 +15,8 @@ describe('AppComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [],
-      declarations: [AppComponent],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+      imports: [RouterTestingModule.withRoutes([])],
+      declarations: [AppComponent]
     }).compileComponents();
   });
 

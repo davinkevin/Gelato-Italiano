@@ -35,6 +35,10 @@ header {
           color: #f4e7ab;
           font-weight: 500;
         }
+        &.active {
+          background-color: #23150a;
+          color: #f9e37d;
+        }
       }
     }
   }
