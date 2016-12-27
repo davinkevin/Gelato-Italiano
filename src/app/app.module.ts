@@ -4,10 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { FlavorService } from './shared/service/flavor/flavor.service';
 import { AppRoutesModules } from './app.routes';
 import { FlavorsComponent } from './flavors/flavors.component';
-import {FlavorsResolver} from './shared/resolver/flavors/flavors.resolver';
+import {SharedModule} from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -18,9 +17,10 @@ import {FlavorsResolver} from './shared/resolver/flavors/flavors.resolver';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutesModules
+    AppRoutesModules,
+    SharedModule
   ],
-  providers: [FlavorService, FlavorsResolver],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
