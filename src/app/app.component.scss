@@ -8,6 +8,40 @@ $primary-color : #372211;
 }
 
 header {
+  .navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+
+    .navbar-nav {
+      display: inline-block;
+      float: none;
+      vertical-align: top;
+    }
+    .navbar-collapse {
+      text-align: center;
+    }
+  }
+
+
+  .navbar-default {
+    background-color: $primary-color;
+    border-color: $primary-color;
+
+    li {
+      color:white;
+      a {
+        @include textOnPrimaryBackground();
+        &:hover {
+          color: #f4e7ab;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+section.visual {
+
   .jumbotron {
     width: 100%;
     padding-left: 0 !important;
@@ -47,29 +81,19 @@ header {
     }
   }
 
-  .navbar .navbar-nav {
-    display: inline-block;
-    float: none;
-    vertical-align: top;
-  }
-
-  .navbar .navbar-collapse {
-    text-align: center;
-  }
-
-  .navbar-default {
+  .navbar.navbar-default {
+    border-radius: 0;
     background-color: $primary-color;
     border-color: $primary-color;
+    margin-bottom: 0;
+    min-height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    li {
-      color:white;
-      a {
-        @include textOnPrimaryBackground();
-        &:hover {
-          color: #f4e7ab;
-          font-weight: 500;
-        }
-      }
+    p.text-muted {
+      @include textOnPrimaryBackground();
+      margin: 5px;
     }
   }
 }
@@ -118,7 +142,8 @@ section.flavors {
   }
 }
 
-.footer.navbar-default {
+footer.navbar-default {
+  border-radius: 0;
   background-color: $primary-color;
   border-color: $primary-color;
   margin-bottom: 0;

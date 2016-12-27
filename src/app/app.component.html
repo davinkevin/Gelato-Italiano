@@ -1,5 +1,4 @@
 <header>
-    <div class="jumbotron"></div>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="collapse navbar-collapse">
@@ -12,55 +11,29 @@
         </div>
     </nav>
 </header>
+
+<section class="visual">
+    <div class="jumbotron"></div>
+    <div class="navbar navbar-default">
+        <p class="text-muted">Gelato Italiano depuis 1886</p>
+    </div>
+</section>
+
 <section class="flavors">
+
     <h3>Flavors</h3>
 
     <ul class="flavors">
-        <li class="box">
+        <li class="box" *ngFor="let flavor of flavors">
             <div class="cover">
-                <img src="assets/img/flavor/speculos.jpg" alt="dulcedeleche">
+                <img [src]="flavor.cover">
             </div>
-            <div class="title">Title</div>
-            <div class="desc">Lorem Ipsum...</div>
-        </li>
-        <li class="box">
-            <div class="cover">
-                <img src="assets/img/flavor/agrumi.jpg" alt="dulcedeleche">
-            </div>
-            <div class="title">Title</div>
-            <div class="desc">Lorem Ipsum...</div>
-        </li>
-        <li class="box">
-            <div class="cover">
-                <img src="assets/img/flavor/caffe.jpg" alt="dulcedeleche">
-            </div>
-            <div class="title">Title</div>
-            <div class="desc">Lorem Ipsum...</div>
-        </li>
-        <li class="box">
-            <div class="cover">
-                <img src="assets/img/flavor/cioccolato.jpg" alt="dulcedeleche">
-            </div>
-            <div class="title">Title</div>
-            <div class="desc">Lorem Ipsum...</div>
-        </li>
-        <li class="box">
-            <div class="cover">
-                <img src="assets/img/flavor/citron_basilic.jpg" alt="dulcedeleche">
-            </div>
-            <div class="title">Title</div>
-            <div class="desc">Lorem Ipsum...</div>
-        </li>
-        <li class="box">
-            <div class="cover">
-                <img src="assets/img/flavor/inimitabile.jpg" alt="dulcedeleche">
-            </div>
-            <div class="title">Title</div>
-            <div class="desc">Lorem Ipsum...</div>
+            <div class="title">{{ flavor.title }}</div>
+            <div class="desc">{{ flavor.description }}</div>
         </li>
     </ul>
 </section>
 
-<div class="footer navbar navbar-default">
-    <p class="text-muted">Developed with <i class="glyphicon glyphicon-heart-empty"></i> by [PUT YOUR NAME HERE] !</p>
-</div>
+<footer class="navbar navbar-default">
+    <p class="text-muted">Developed with <i class="glyphicon glyphicon-heart-empty"></i> by {{ author }} !</p>
+</footer>
