@@ -1,0 +1,15 @@
+<div class="flavors-chooser">
+
+    <label *ngFor="let flavor of flavors" [class.selected]="contains(flavor)">
+        <input type="checkbox" name="size"
+               [attr.value]="flavor"
+               (blur)="onBlur(flavor)"
+               (change)="updateFlavor(flavor)"
+               (focus)="onFocus(flavor)"
+               [checked]="value === flavor" />
+
+        <div class="cover" [style.background-image]="'url(' + flavor.cover + ')'"></div>
+        <div class="title">{{ flavor.name }}</div>
+    </label>
+
+</div>

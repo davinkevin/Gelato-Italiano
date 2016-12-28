@@ -11,8 +11,7 @@
     background-image: url('assets/img/order/bac.jpg');
     background-size: cover;
     flex-grow: 1;
-    width: 35%;
-    height: 85vh;
+    min-width: 35%;
   }
 
   .order {
@@ -58,7 +57,7 @@
           background: #fff;
           box-shadow: 0 3px 5px rgba(0, 0, 0, 0.02);
           border-radius: 2px;
-          border: 1px solid #f4eab1;
+          border: 1px solid $secondary-color;
           font-size: 18px;
           padding: 10px 15px;
           outline: none;

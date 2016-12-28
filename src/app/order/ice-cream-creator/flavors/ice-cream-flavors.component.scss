@@ -1,0 +1,49 @@
+@import "../../../app.component";
+
+.flavors-chooser {
+
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  label {
+    min-width: 220px;
+    background-color: rgba(255, 255, 255, .38);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.10);
+    cursor: pointer;
+
+    &.selected {
+      background-color: rgba(55, 34, 17, 0.38);
+    }
+
+    .cover {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background-position-x: 50%;
+      background-position-y: 50%;
+      background-size: cover;
+      float: left !important;
+    }
+    .title {
+      display: inline-block;
+      color: $primary-color;
+      font-weight: 500;
+      font-size: 15px;
+      padding: 10px 20px 5px 20px;
+    }
+
+    & > input {
+      visibility: hidden;
+      position: absolute;
+
+      & + div.cover {
+        /*height: 50px;*/
+        cursor:pointer;
+        border:2px solid transparent;
+      }
+    }
+
+  }
+}

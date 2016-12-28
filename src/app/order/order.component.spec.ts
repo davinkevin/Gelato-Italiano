@@ -1,7 +1,7 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import {DebugElement, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 
 import { OrderComponent } from './order.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
@@ -14,7 +14,8 @@ describe('OrderComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [ FormsModule, ReactiveFormsModule ],
-      declarations: [ OrderComponent ]
+      declarations: [ OrderComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
   }));

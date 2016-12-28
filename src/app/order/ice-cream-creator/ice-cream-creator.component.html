@@ -1,0 +1,44 @@
+<div class="title">
+    <h4>Create your Ice-Cream(s) </h4>
+</div>
+
+<div class="ice-cream-chooser" [formGroup]="currentIceCream">
+
+    <h5>Select the size <span class="required">*</span></h5>
+    <gi-ice-cream-size formControlName="size"></gi-ice-cream-size>
+
+    <h5>Choose flavor(s)</h5>
+    <gi-ice-cream-flavors formControlName="flavors"></gi-ice-cream-flavors>
+
+    <div class="add-to-basket">
+
+        <button class="btn" (click)="addIceCream()"
+            [disabled]="currentIceCream.invalid"
+            >
+            <i class="glyphicon glyphicon-plus"></i> Add new Ice-Cream
+        </button>
+
+    </div>
+</div>
+
+<div *ngFor="let iceCream of iceCreams.controls; let i = index;">
+    <div class="ice-cream-header">
+        Ice-Cream {{ i + 1}}
+
+        <i class="glyphicon ice-cream-status"
+           [class.glyphicon-ok]="iceCream.valid"
+           [class.glyphicon-remove]="iceCream.invalid"></i>
+
+        <div class="pull-right">
+            <span class="ice-cream-price"> {{ priceOf(iceCream.value.size) }} </span>
+
+            <div *ngIf="iceCreams.controls.length > 1"
+                 class="ice-cream-delete"
+                 (click)="removeIceCream(i)">
+                <i class="glyphicon glyphicon-trash"></i>
+            </div>
+        </div>
+
+
+    </div>
+</div>

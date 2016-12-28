@@ -1,4 +1,5 @@
-$primary-color : #372211;
+$primary-color  : #372211;
+$secondary-color: #f9e37d;
 
 @mixin textOnPrimaryBackground() {
   color: #edebe6;
@@ -37,7 +38,7 @@ header {
         }
         &.active {
           background-color: #23150a;
-          color: #f9e37d;
+          color: $secondary-color;
         }
       }
     }

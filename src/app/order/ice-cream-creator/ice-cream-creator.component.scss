@@ -1,0 +1,75 @@
+@import "../../app.component";
+
+.title {
+  display: flex;
+  justify-content: space-between;
+
+  h4 {
+    color: $primary-color;
+  }
+
+  button {
+    background: none;
+    cursor: pointer;
+    color: $primary-color;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    outline: none;
+  }
+}
+
+.ice-cream-header {
+  font-size: 16px;
+  padding: 10px 15px;
+  color: $primary-color;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  .ice-cream-status {
+    font-size: 14px;
+    margin-left: 5px;
+    position: relative;
+    top: -1px;
+    &.glyphicon-ok {
+      color: #4cae4c;
+    }
+    &.glyphicon-remove {
+      color: #5D202D;
+    }
+
+  }
+
+  .ice-cream-price {
+    display: inline-block;
+    padding: 9px;
+    border-radius: 3px;
+    color: $primary-color;
+    font-size: 14px;
+    &:after {
+      content: '€';
+    }
+  }
+
+  .ice-cream-delete {
+    display: inline-block;
+    padding: 9px;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #5D202D;
+    font-size: 14px;
+    &:hover {
+      background: rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+
+.ice-cream-chooser {
+  padding-top:16px;
+
+  .add-to-basket {
+    padding-top:16px;
+    display: flex;
+    justify-content: center;
+  }
+}

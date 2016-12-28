@@ -5,6 +5,7 @@ import {Http} from '@angular/http';
 
 export interface Flavor {
   title: string;
+  name: string;
   description: string;
   cover: string;
 }

@@ -1,0 +1,16 @@
+<div class="ice-cream-size section">
+
+  <label *ngFor="let size of sizes; let i = index;" class="ice-cream-size-label">
+
+    <input type="radio" name="size"
+           [attr.value]="size"
+           (blur)="onBlur(size)"
+           (change)="onChange(size)"
+           (focus)="onFocus(size)"
+           [checked]="value === size" />
+
+    <img src="assets/img/format/cone_{{size}}.png" height="150vh">
+    {{ capitalize(size) }}
+  </label>
+
+</div>

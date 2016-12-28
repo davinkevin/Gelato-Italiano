@@ -36,5 +36,11 @@
 
     <hr/>
 
+    <gi-ice-cream-creator
+            formArrayName="iceCreams"
+            [iceCreams]="form.get('iceCreams')">
+    </gi-ice-cream-creator>
+
+    <gi-price-calculator [iceCreams]="form.get('iceCreams').value"></gi-price-calculator>
   </form>
 </div>

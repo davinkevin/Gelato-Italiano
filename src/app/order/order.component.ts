@@ -19,7 +19,8 @@ export class OrderComponent implements OnInit {
         name: ['', Validators.required],
         email: ['', Validators.required],
         valid: ['', Validators.required]
-      }, { validator: emailMatcher } )
+      }, { validator: emailMatcher } ),
+    iceCreams: this.formBuilder.array([], Validators.minLength(1))
     });
   }
 
