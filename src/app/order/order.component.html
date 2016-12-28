@@ -1,0 +1,40 @@
+<div class="order-container">
+  <div class="picture-left"></div>
+  <form class="order" [formGroup]="form">
+
+    <h4>Enter your information</h4>
+    <div class="details" formGroupName="details">
+
+      <div class="field-input">
+        <label for="name"> Name <span class="required">*</span>
+          <span *ngIf="form.get('details').get('name').errors && form.get('details').get('name').touched"
+                class="error">Field is required</span>
+        </label>
+        <input formControlName="name" placeholder="John Doe" id="name" type="text">
+      </div>
+
+      <div class="field-input">
+        <label for="email"> Email <span class="required">*</span>
+          <span *ngIf="form.get('details').get('email').errors && form.get('details').get('email').touched"
+                class="error">Field is required</span>
+        </label>
+        <input formControlName="email" placeholder="john@doe.com" id="email" type="text">
+      </div>
+
+      <div class="field-input">
+        <label for="emailv"> Validation <span class="required">*</span>
+          <span *ngIf="form.get('details').get('valid').touched" class="error">
+              <span *ngIf="form.get('details').get('valid').errors?.required">Field is required</span>
+              <span *ngIf="!form.get('details').get('valid').errors && form.get('details').errors?.nomatch">Emails mismatch</span>
+          </span>
+        </label>
+        <input formControlName="valid" placeholder="john@doe.com" id="emailv" type="text">
+      </div>
+
+
+    </div>
+
+    <hr/>
+
+  </form>
+</div>

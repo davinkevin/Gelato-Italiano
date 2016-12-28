@@ -7,9 +7,9 @@ import { FlavorsComponent } from './flavors/flavors.component';
 import { FlavorsResolver } from './shared/resolver/flavors/flavors.resolver';
 
 const routes: Routes = [
-    {path : '', redirectTo : '/', pathMatch : 'full'},
+    {path : '', redirectTo : '/home', pathMatch : 'full'},
     {
-        path : '',
+        path : 'home',
         component : FlavorsComponent,
         resolve: { flavors: FlavorsResolver }
     }

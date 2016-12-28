@@ -1,0 +1,77 @@
+@import "../app.component";
+
+.order-container {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+
+  .picture-left {
+    background-image: url('assets/img/order/bac.jpg');
+    background-size: cover;
+    flex-grow: 1;
+    width: 35%;
+    height: 85vh;
+  }
+
+  .order {
+    flex-grow:2;
+    margin-left:3vh;
+    margin-right: 3vh;
+
+    h4 {
+      color: $primary-color;
+    }
+
+    .details {
+
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+
+      .field-input {
+        flex-grow:1;
+        margin: 0 30px 0 0;
+        label {
+          font-size: 12px;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: rgba(0, 0, 0, 0.6);
+          display: block;
+          margin-bottom: 10px;
+
+          .required {
+            color: #E01D3B;
+            font-weight: 700;
+          }
+
+          .error {
+            float: right !important;
+            color: #E01D3B;
+            font-weight: 700;
+          }
+
+        }
+
+        input {
+          background: #fff;
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.02);
+          border-radius: 2px;
+          border: 1px solid #f4eab1;
+          font-size: 18px;
+          padding: 10px 15px;
+          outline: none;
+          font-family: inherit;
+          color: rgba(0, 0, 0, 0.8);
+          width: 100%;
+        }
+
+      }
+
+    }
+
+
+  }
+}
+

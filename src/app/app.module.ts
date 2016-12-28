@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { AppRoutesModules } from './app.routes';
 import { FlavorsComponent } from './flavors/flavors.component';
 import {SharedModule} from './shared/shared.module';
+import {OrderModule} from './order/order.module';
 
 @NgModule({
   declarations: [
@@ -14,11 +15,10 @@ import {SharedModule} from './shared/shared.module';
     FlavorsComponent
   ],
   imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    AppRoutesModules,
-    SharedModule
+    /* Main */      BrowserModule, FormsModule, HttpModule,
+    /* Routes */    AppRoutesModules,
+    /* Shared */    SharedModule,
+    /* Features */  OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
