@@ -32,7 +32,7 @@ describe('FlavorService', () => {
 
   it('should query the back-end to fetch all flavors', () => {
     /* Given */
-    let body: Flavor[] = [{title: 'foo', description: 'desc foo', cover: 'assets/foo.jpg'}];
+    let body: Flavor[] = [{title: 'foo', name: 'n', description: 'desc foo', cover: 'assets/foo.jpg'}];
     let conn: MockConnection;
 
     mockBackend.connections.subscribe((c: MockConnection) => {

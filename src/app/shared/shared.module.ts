@@ -6,11 +6,12 @@ import {NgModule} from '@angular/core';
 import {FlavorService} from './service/flavor/flavor.service';
 import {FlavorsResolver} from './resolver/flavors/flavors.resolver';
 import {PriceService} from './service/price/price.service';
+import {OrderService} from './service/order/order.service';
 
 @NgModule({
     providers: [
         FlavorService, FlavorsResolver,
-        PriceService
+        PriceService, OrderService
     ]
 })
 export class SharedModule {}

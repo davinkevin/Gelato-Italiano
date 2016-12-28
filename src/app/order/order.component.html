@@ -1,6 +1,6 @@
 <div class="order-container">
   <div class="picture-left"></div>
-  <form class="order" [formGroup]="form">
+  <form class="order" [formGroup]="form" (ngSubmit)="onSubmit()">
 
     <h4>Enter your information</h4>
     <div class="details" formGroupName="details">
@@ -42,5 +42,9 @@
     </gi-ice-cream-creator>
 
     <gi-price-calculator [iceCreams]="form.get('iceCreams').value"></gi-price-calculator>
+
+    <button type="submit" class="btn" [disabled]="form.invalid">
+      Place Order
+    </button>
   </form>
 </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 import {emailMatcher} from './validators/email-matcher.validator';
+import {OrderService} from '../shared/service/order/order.service';
 
 @Component({
   selector: 'gi-order',
@@ -11,7 +12,9 @@ export class OrderComponent implements OnInit {
 
   form: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder,
+              private orderService: OrderService
+  ) {}
 
   ngOnInit() {
     this.form = this.formBuilder.group({
@@ -22,6 +25,13 @@ export class OrderComponent implements OnInit {
       }, { validator: emailMatcher } ),
     iceCreams: this.formBuilder.array([], Validators.minLength(1))
     });
+  }
+
+  onSubmit() {
+    this.orderService
+        .create(this.form.value)
+        .subscribe(o => console.log(`Order saved with ID ${o.id}`))
+    ;
   }
 
 }
