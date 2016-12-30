@@ -1,28 +1,16 @@
 <div class="title">
     <h4>Create your Ice-Cream(s) </h4>
-</div>
-
-<div class="ice-cream-chooser" [formGroup]="currentIceCream">
-
-    <h5>Select the size <span class="required">*</span></h5>
-    <gi-ice-cream-size formControlName="size"></gi-ice-cream-size>
-
-    <h5>Choose flavor(s)</h5>
-    <gi-ice-cream-flavors formControlName="flavors"></gi-ice-cream-flavors>
-
-    <div class="add-to-basket">
-
-        <button class="btn" (click)="addIceCream()"
-            [disabled]="currentIceCream.invalid"
-            >
-            <i class="glyphicon glyphicon-plus"></i> Add new Ice-Cream
-        </button>
-
-    </div>
+    <button class="btn" (click)="addIceCream()" type="button">
+        <i class="glyphicon glyphicon-plus"></i> Add new Ice-Cream
+    </button>
 </div>
 
 <div *ngFor="let iceCream of iceCreams.controls; let i = index;">
-    <div class="ice-cream-header">
+    <div class="ice-cream-header" (click)="toggleIceCream(i)">
+
+        <i class="glyphicon open-close"
+           [class.glyphicon-chevron-down]="iceCreamInEdition !== i"
+           [class.glyphicon-chevron-up]="iceCreamInEdition === i"></i>
         Ice-Cream {{ i + 1}}
 
         <i class="glyphicon ice-cream-status"
@@ -38,7 +26,12 @@
                 <i class="glyphicon glyphicon-trash"></i>
             </div>
         </div>
+    </div>
+    <div class="ice-cream-chooser" [formGroup]="iceCream" *ngIf="iceCreamInEdition === i">
+        <h5>Select the size <span class="required">*</span></h5>
+        <gi-ice-cream-size formControlName="size"></gi-ice-cream-size>
 
-
+        <h5>Choose flavor(s)</h5>
+        <gi-ice-cream-flavors formControlName="flavors"></gi-ice-cream-flavors>
     </div>
 </div>

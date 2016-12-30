@@ -10,14 +10,14 @@ import {PriceService} from '../../shared/service/price/price.service';
 export class IceCreamCreatorComponent implements OnInit {
 
     @Input() iceCreams: FormArray;
-    currentIceCream: FormGroup;
+    iceCreamInEdition: number;
 
     constructor(private formBuilder: FormBuilder,
                 private priceService: PriceService
     ) {}
 
-    ngOnInit() {
-        this.currentIceCream = this.generateIceCreamGroup();
+    ngOnInit(): void {
+        this.addIceCream();
     }
 
     priceOf(size: string): number {
@@ -25,8 +25,8 @@ export class IceCreamCreatorComponent implements OnInit {
     }
 
     addIceCream(): void {
-        this.iceCreams.push(this.currentIceCream);
-        this.currentIceCream = this.generateIceCreamGroup();
+        this.iceCreams.push(this.generateIceCreamGroup());
+        this.iceCreamInEdition = this.iceCreams.length - 1;
     }
 
     private generateIceCreamGroup(): FormGroup {
@@ -36,7 +36,16 @@ export class IceCreamCreatorComponent implements OnInit {
         });
     }
 
-    removeIceCream(i: number) {
+    toggleIceCream(i: number): void {
+        if (this.iceCreamInEdition === i) {
+            this.iceCreamInEdition = null;
+            return;
+        }
+
+        this.iceCreamInEdition = i;
+    }
+
+    removeIceCream(i: number): void {
         this.iceCreams.removeAt(i);
     }
 

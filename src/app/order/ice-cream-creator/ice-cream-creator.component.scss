@@ -30,14 +30,20 @@
     font-size: 14px;
     margin-left: 5px;
     position: relative;
-    top: -1px;
+    top: 1px;
     &.glyphicon-ok {
       color: #4cae4c;
     }
     &.glyphicon-remove {
       color: #5D202D;
     }
+  }
 
+  .glyphicon.open-close {
+    font-size: 14px;
+    margin-left: 5px;
+    position: relative;
+    top: 1px;
   }
 
   .ice-cream-price {

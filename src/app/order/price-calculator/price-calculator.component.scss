@@ -11,4 +11,7 @@
   &:after {
     content: ' €'
   }
+  &:before {
+    content: 'Total : '
+  }
 }
